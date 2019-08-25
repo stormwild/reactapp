@@ -30,7 +30,8 @@ const config = {
   devServer: {
     contentBase: PUBLIC,
     port: 9000,
-    open: true
+    open: true,
+    historyApiFallback: true
   }
 };
 

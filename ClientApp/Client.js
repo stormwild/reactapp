@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Hello from './Hello.js';
+import browserHistory from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import App from './App.js';
 
 ReactDOM.render(
-  <Hello name="world" />,
+  <Router history={browserHistory}>
+    <App name="world" />
+  </Router>,
   document.getElementById('app')
 )

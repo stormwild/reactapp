@@ -22,6 +22,12 @@ Configure eslint for React
 npx eslint --init
 ```
 
+## React Router
+
+```
+npm i react-router react-router-dom
+```
+
 ## References
 
 - [Building a Website with React and ASP.NET Core](https://app.pluralsight.com/library/courses/aspdotnet-core-react-building-website/table-of-contents)
