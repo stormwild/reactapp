@@ -4,25 +4,11 @@ const path = require('path');
 const SRC = path.resolve(__dirname, 'ClientApp');
 const PUBLIC = path.resolve(__dirname, 'public');
 
+const merge = require('webpack-merge');
+const base = require('./webpack.config.base.js');
+
 const config = {
   entry: SRC + '/Client.js',
-  devtool: 'source-map',
-  module: {
-    rules: [
-      {
-        test: /\.js?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        options: {
-          presets: [
-            'react',
-            'stage-2',
-            ['env', { targets: { browsers: ['last 2 versions'] } }]
-          ]
-        }
-      }
-    ]
-  },
   output: {
     path: PUBLIC,
     filename: 'bundle.js'
@@ -35,4 +21,4 @@ const config = {
   }
 };
 
-module.exports = config;
+module.exports = merge(base, config);
