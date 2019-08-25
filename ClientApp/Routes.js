@@ -2,32 +2,16 @@ import React, { Component } from 'react';
 
 import { Switch, Route } from 'react-router-dom';
 
+import Home from './Components/Home';
+import Speakers from './Components/Speakers';
+
 class Routes extends Component {
   render() {
     return (
       <div>
         <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => {
-              return (
-                <div>
-                  <h2>Home page</h2>
-                </div>
-              );
-            }}
-          />
-          <Route
-            path="/page2"
-            render={() => {
-              return (
-                <div>
-                  <h2>Page 2</h2>
-                </div>
-              );
-            }}
-          />
+          <Route exact path="/" component={Home} />
+          <Route path="/speakers" component={Speakers} />
           <Route
             render={() => {
               return (
